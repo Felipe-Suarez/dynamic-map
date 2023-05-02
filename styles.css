@@ -1,0 +1,8 @@
+#map {
+  transform: perspective(500px) rotateX(20deg);
+}
+
+#markerMap {
+  fill: red;
+  transform: scale(3.73);
+}
