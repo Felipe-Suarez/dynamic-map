@@ -10,9 +10,9 @@ const getAtts = (n) => n.map(num => finalAtts[num])
 
 setInterval(() => {
     const randoms = []
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 16; i++) {
         randoms.push(random())
     }
 
     miPath.setAttribute('d', getAtts(randoms).join(''))
-}, 1000)
+}, 8100)

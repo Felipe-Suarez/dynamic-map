@@ -1,8 +1,28 @@
+body{
+  background-color: #000727;
+  height: 100vh;
+}
+
 #map {
   transform: perspective(500px) rotateX(20deg);
 }
 
 #markerMap {
-  fill: red;
+  fill: rgba(36, 186, 214, .2);
   transform: scale(3.73);
+  animation: fillColorChange 8s infinite;
+  
+}
+
+
+@keyframes fillColorChange {
+  0%  { fill: transparent; filter: drop-shadow(0px 0px .8px rgba(36, 186, 214, .0))}
+  10% { filter: drop-shadow(0px 0px .8px rgba(36, 186, 214, .8))}
+ 
+  40% { filter: drop-shadow(0px 0px .8px rgba(36, 186, 214, .8)) drop-shadow(0px -1px .8px rgba(36, 186, 214, 1))drop-shadow(0px -3px .8px rgba(36, 186, 214, .8))drop-shadow(0px -5px 1px rgba(15, 154, 171, 1))drop-shadow(0px -6px 1px rgba(15, 154, 171, .8)) }
+  50% { fill: #15779D;filter: drop-shadow(0px 0px .8px rgba(36, 186, 214, .8)) drop-shadow(0px -1px .8px rgba(36, 186, 214, 1))drop-shadow(0px -3px .8px rgba(36, 186, 214, .8))drop-shadow(0px -5px 1px rgba(15, 154, 171, 1))drop-shadow(0px -6px 1px rgba(15, 154, 171, .8)) }
+  60% { filter: drop-shadow(0px 0px .8px rgba(36, 186, 214, .8)) drop-shadow(0px -1px .8px rgba(36, 186, 214, 1))drop-shadow(0px -3px .8px rgba(36, 186, 214, .8))drop-shadow(0px -5px 1px rgba(15, 154, 171, 1))drop-shadow(0px -6px 1px rgba(15, 154, 171, .8)) }
+  
+  90% {filter: drop-shadow(0px 0px .8px rgba(36, 186, 214, .8))}
+  100%   { fill: transparent; filter: drop-shadow(0px 0px .8px rgba(36, 186, 214, .0)) }
 }
